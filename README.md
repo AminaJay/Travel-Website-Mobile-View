@@ -14,7 +14,7 @@ You can view a live version of this project here:
 
 ## Loom Video Recording
 A video walkthrough and demonstration of the project can be found here:
-[Loom Video](https://your-loom-video-link-here.com)
+[Loom Video](https://www.loom.com/share/cf9c69dd926444d7af0b0c8e0a7a1b21?sid=698903cf-e7c9-4f28-9c59-1ed446e8c9c2)
 
 ***
 
