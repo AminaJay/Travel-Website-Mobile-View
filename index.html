@@ -1,71 +1,64 @@
-<!DOCTYPE html> <!-- Declares the document as HTML5 -->
-<html lang="en"> <!-- Sets the language of the document to English -->
-<head>
-    <meta charset="UTF-8"> <!-- Specifies the character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering on mobile devices -->
-    <title>Travel Landing Page</title> <!-- Title of the webpage -->
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Opens the HTML document with language set to English -->
 
-    <!-- Preconnect to Google Fonts for faster loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<head> <!-- Head section containing metadata and resources -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
 
-    <!-- Import Google Fonts: Gilda Display and Urbanist -->
-    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Link to external stylesheet -->
-    <link href="styles.css"rel="stylesheet">
+    <title>Travel Landing Page</title> <!-- Title of the webpage displayed in browser tab -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Improves loading performance by preconnecting to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect to Google Fonts static resource with cross-origin enabled -->
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet"> <!-- Imports custom Google Fonts -->
+    <link href="styles.css" rel="stylesheet"> <!-- Links external CSS file -->
+
 </head>
-<body>
 
-    <!-- Header section with logo and menu button -->
-    <header class="main-header">
-        <div class="container">
-            <span class="logo">Travel</span> <!-- Website logo -->
-            <button class="menu-button">
-                <img src="Images/menu.svg" alt="Menu Icon"> <!-- Menu icon for mobile view -->
+<body> <!-- Body of the webpage where visible content goes -->
+    <header class="main-header"> <!-- Website header -->
+        <div class="container"> <!-- Container for layout alignment -->
+            <span class="logo">Travel</span> <!-- Website logo text -->
+            <button class="menu-button"> <!-- Menu button for navigation (mobile use) -->
+                <img src="Images/menu.svg" alt="Menu Icon"> <!-- Menu icon image -->
             </button>
         </div>
     </header>
 
-    <main>
-        <!-- Hero section with main headline and image -->
-        <section class="hero-section">
+    <main> <!-- Main content of the webpage -->
+        <section class="hero-section"> <!-- Hero section (intro banner) -->
             <div class="container">
-                <h1 class="hero-title">Travel around the world</h1> <!-- Hero title -->
-                <div class="hero-image-wrapper">
+                <h1 class="hero-title"> <!-- Main heading -->
+                    <span class="hero-brand-word">Travel</span> around the world <!-- Highlighted brand word -->
+                </h1>
+                <div class="hero-image-wrapper"> <!-- Wrapper for hero image -->
                     <img src="Images/Content.png" alt="Happy couple traveling" class="hero-image"> <!-- Hero image -->
                 </div>
             </div>
         </section>
 
-        <!-- Introduction to destinations -->
-        <section class="destination-intro-section">
+        <section class="destination-intro-section"> <!-- Section introducing destinations -->
             <div class="container">
                 <h2 class="destination-heading">Find your best destination</h2> <!-- Section heading -->
-                <p class="destination-description">We have more than 1000+ destinations you can choose.</p> <!-- Short description -->
+                <p class="destination-description">We have more than 1000+ destinations you can choose.</p> <!-- Description text -->
             </div>
         </section>
 
-        <!-- Cards for different travel destinations -->
-        <section class="destination-cards-section">
+        <section class="destination-cards-section"> <!-- Section for destination cards -->
             <div class="container">
-                
-                <!-- Card 1: Mirror Lake -->
-                <div class="destination-card">
-                    <div class="card-image-wrapper">
-                        <img src="Images/Image.png" alt="Mirror Lake" class="card-image">
+                <div class="destination-card"> <!-- Destination card 1 -->
+                    <div class="card-image-wrapper"> <!-- Wrapper for card image -->
+                        <img src="Images/Image.png" alt="Mirror Lake" class="card-image"> <!-- Destination image -->
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Mirror Lake</h3>
-                        <div class="card-location">
-                            <img src="Images/Location.svg" alt="Location Icon" class="location-icon">
-                            <span class="location-text">Jawa Tengah, Indonesia</span>
+                    <div class="card-content"> <!-- Card text content -->
+                        <h3 class="card-title">Mirror Lake</h3> <!-- Destination name -->
+                        <div class="card-location"> <!-- Location section -->
+                            <img src="Images/Location.svg" alt="Location Icon" class="location-icon"> <!-- Location icon -->
+                            <span class="location-text">Jawa Tengah, Indonesia</span> <!-- Location text -->
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: Hot Air Balloon -->
-                <div class="destination-card destination-card--large-text">
+                <div class="destination-card"> <!-- Destination card 2 -->
                     <div class="card-image-wrapper">
                         <img src="Images/Image (1).png" alt="Hot Air Balloon" class="card-image">
                     </div>
@@ -78,8 +71,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Oeschinen Lake -->
-                <div class="destination-card destination-card--large-text">
+                <div class="destination-card"> <!-- Destination card 3 -->
                     <div class="card-image-wrapper">
                         <img src="Images/Image (2).png" alt="Oeschinen Lake" class="card-image">
                     </div>
@@ -91,9 +83,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Card 4: Rhine Falls -->
-                <div class="destination-card destination-card--large-text">
+
+                <div class="destination-card"> <!-- Destination card 4 -->
                     <div class="card-image-wrapper">
                         <img src="Images/Image (4).png" alt="Rhine Falls" class="card-image">
                     </div>
@@ -106,8 +97,7 @@
                     </div>
                 </div>
 
-                <!-- Card 5: Sunter Lake -->
-                <div class="destination-card destination-card--large-text">
+                <div class="destination-card"> <!-- Destination card 5 -->
                     <div class="card-image-wrapper">
                         <img src="Images/Image (3).png" alt="Sunter Lake" class="card-image">
                     </div>
@@ -120,8 +110,7 @@
                     </div>
                 </div>
 
-                <!-- Card 6: Negeri di atas Awan -->
-                <div class="destination-card destination-card--large-text">
+                <div class="destination-card"> <!-- Destination card 6 -->
                     <div class="card-image-wrapper">
                         <img src="Images/Image (5).png" alt="Negeri di atas Awan" class="card-image">
                     </div>
@@ -133,73 +122,62 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </section>
 
-        <!-- Why choose us section -->
-        <section class="why-choose-us-section">
+        <section class="why-choose-us-section"> <!-- Section explaining why to choose the service -->
             <div class="container">
-                <h2 class="why-choose-us-heading">Why must choose us</h2> <!-- Section title -->
-                <p class="why-choose-us-description">
-                    We have been around for over 10 years. Accompany all our customers all over the world. Thousands of our customers always recommend us because of the service we provide. We are always re-elected and now you will choose us as your travel agent!
-                </p> <!-- Section description -->
-                <hr>
-                <div class="demarcation-line"></div> <!-- Decorative line -->
+                <h2 class="why-choose-us-heading">Why must choose us</h2>
+                <p class="why-choose-us-description">We have been around for over 10 years. Accompany all our customers all over the world. Thousands of our customers always recommend us because of the service we provide. We are always re-elected and now you will choose us as your travel agent!</p>
+            </div>
+        </section>
 
-                <!-- Feature block promoting quality of guides -->
-                <div class="feature-block">
-                    <h3 class="feature-title">Best Guide, Best Experience.</h3>
-                    <p class="feature-description">Your trip will be very memorable with the best guide.</p>
-                    <a href="#" class="more-details-link">
-                        More details 
+        <section class="feature-cards-section"> <!-- Section highlighting features -->
+            <div class="container">
+                <div class="feature-card feature-card--light-bg"> <!-- Feature card 1 -->
+                    <h3 class="feature-card-title">Best Guide, Best Experience.</h3>
+                    <p class="feature-card-description">Your trip will be very memorable with the best guide.</p>
+                    <a href="#" class="more-details-link"> <!-- Link to details -->
+                        More details
                         <img src="Images/arrow-right.png" alt="Arrow icon" class="arrow-icon">
                     </a>
                 </div>
-            </div>
-        </section>
 
-        <!-- Feature cards section -->
-        <section class="feature-cards-section">
-            <div class="container">
-
-                <!-- Card: Special tickets -->
-                <div class="feature-card feature-card--dark-bg">
+                <div class="feature-card feature-card--dark-bg"> <!-- Feature card 2 -->
                     <h3 class="feature-card-title">Always have Special Tickets.</h3>
                     <p class="feature-card-description">We always offer special tickets and we give them to all customers</p>
-                    <a href="#" class="more-details-link feature-card-link--gilda">
-                        More details 
+                    <a href="#" class="more-details-link">
+                        More details
                         <img src="Images/arrow-right.png" alt="Arrow icon" class="arrow-icon">
                     </a>
                 </div>
-                <hr>
-                <!-- Card: 24/7 support -->
-                <div class="feature-card feature-card--light-bg">
+
+                <div class="feature-card feature-card--light-bg"> <!-- Feature card 3 -->
                     <h3 class="feature-card-title">Always Ready Support 24/7.</h3>
-                    <p class="feature-card-description feature-card-description--small">
-                        We always make time to ask questions anytime and anywhere.
-                    </p>
-                    <a href="#" class="more-details-link feature-card-link--gilda">
-                        More details 
+                    <p class="feature-card-description">We always make time to ask questions anytime and anywhere.</p>
+                    <a href="#" class="more-details-link">
+                        More details
                         <img src="Images/arrow-right.png" alt="Arrow icon" class="arrow-icon">
                     </a>
                 </div>
             </div>
         </section>
-        
-        <!-- Memorable trip section with image -->
-        <section class="travel-memorable-section">
+
+        <section class="travel-memorable-section"> <!-- Section promoting memorable trips -->
             <div class="container">
-                <h2 class="travel-memorable-title">Travel, make the trip memorable</h2>
-                <p class="travel-memorable-description">Thousands of our customers always recommend us because of the service we provide. Your trip will be very memorable with the best travel agent. Travel</p>
+                <div class="text-content">
+                    <h2 class="travel-memorable-title">
+                        <span class="travel-brand-word">Travel</span>, make the trip memorable
+                    </h2>
+                    <p class="travel-memorable-description">Thousands of our customers always recommend us because of the service we provide. Your trip will be very memorable with the best travel agent. Travel</p>
+                </div>
                 <div class="travel-memorable-image-wrapper">
                     <img src="Images/ImageGroup.png" alt="Happy couple looking at a map" class="travel-memorable-image">
                 </div>
             </div>
         </section>
-
-        <!-- Video documentation section -->
-        <section class="video-documentation-section">
+    
+        <section class="video-documentation-section"> <!-- Section for trip documentation video -->
             <div class="container">
                 <h2 class="video-documentation-title">Watch our entire trip documentation</h2>
                 <div class="video-placeholder-wrapper">
@@ -208,37 +186,31 @@
             </div>
         </section>
 
-        <!-- Call-to-action section -->
-        <section class="call-to-action-section">
+        <section class="call-to-action-section"> <!-- Call to action section -->
             <div class="container">
-                <h2 class="cta-title">Get our best offer now!</h2> <!-- CTA heading -->
-                <div class="cta-button">
-                    <img src="Images/CTA Primer.svg" alt="cta button" class="cta-button-image">
-                </div> <!-- CTA button -->
+                <h2 class="cta-title">Get our best offer now!</h2>
+                <a href="#" class="cta-button">Click here!</a> <!-- CTA button -->
             </div>
         </section>
-
     </main>
-    <hr>
-    <!-- Footer section -->
-    <footer class="main-footer">
+
+    <hr> <!-- Horizontal line divider -->   
+    
+    <footer class="main-footer"> <!-- Website footer -->
         <div class="container">
-
-            <!-- Brand info and tagline -->
-            <div class="footer-brand-info">
-                <span class="footer-logo">Travel</span>
-                <p class="footer-tagline">The best travel agent in the world. Contact us immediatly now!</p>
+            <div class="footer-left-content"> <!-- Left section of footer -->
+                <div class="footer-brand-info">
+                    <span class="footer-logo">Travel</span> <!-- Footer logo -->
+                    <p class="footer-tagline">The best travel agent in the world...</p>
+                </div>
+                <div class="footer-social-icons"> <!-- Social media icons -->
+                    <a href="#" aria-label="Instagram"><img src="Images/Social Icons.svg" alt="Instagram Icon"></a>
+                    <a href="#" aria-label="Twitter"><img src="Images/Social Icons (1).svg" alt="Twitter Icon"></a>
+                    <a href="#" aria-label="Youtube"><img src="Images/Social Icons (2).svg" alt="YouTube Icon"></a>
+                </div>
             </div>
 
-            <!-- Social media icons -->
-            <div class="footer-social-icons">
-                <a href="#" aria-label="Instagram"><img src="Images/Social Icons.svg" alt="Instagram Icon"></a>
-                <a href="#" aria-label="Twitter"><img src="Images/Social Icons (1).svg" alt="Twitter Icon"></a>
-                <a href="#" aria-label="Youtube"><img src="Images/Social Icons (2).svg" alt="YouTube Icon"></a>
-            </div>
-
-            <!-- Footer navigation menu -->
-            <nav class="footer-nav">
+            <nav class="footer-nav"> <!-- Footer navigation menu -->
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Destinations</a></li>
@@ -246,9 +218,8 @@
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
-
         </div>
     </footer>
-
 </body>
-</html>
+
+</html> <!-- End of HTML document -->
