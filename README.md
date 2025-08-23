@@ -11,11 +11,14 @@ You can view a live version of this project here:
 
 ***
 
-## Loom Video Recording
+## Loom Video Recording (HTML) 
 A video walkthrough and demonstration of the project can be found here:
-.[Live Video](https://www.loom.com/share/e52461ed3a3d4ce7becb9d0052722f54).
+.[Live Video](https://www.loom.com/share/2af31b683b9c4e16882bb9168551cecd?sid=1921efa5-f326-4772-80dc-0252e8ff57bf).
 ***
-
+## Loom Video Recording (CSS)
+A video walkthrough and demonstration of the project can be found here:
+.[Live Video](https://www.loom.com/share/58a7ff90cfac41829f8f8069aa87e598?sid=68de2e1d-8e8d-4268-8128-5062397a9a8e).
+***
 ## Installation
 This is a static website. To view it, simply open the **`index.html`** file in your web browser. There are no additional dependencies or setup required.
 
