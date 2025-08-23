@@ -1,0 +1,736 @@
+/* Universal Styles: Defines root variables for consistent colors and sets a global font family for the entire website. */
+:root { 
+    /* Colors */
+    --color-brand-primary: #25A59E;
+    --color-heading-dark: #333;
+    --color-body-text: #666;
+    --color-light-grey: #F8F8F8;
+    --color-demarcation-line: #B2DFDB;
+    --color-accent-blue: #C6E0E0;
+    --color-accent-orange: #FF8F00;
+
+    /* Fonts */
+    --font-gilda-display: 'Gilda Display', serif;
+    --font-urbanist: 'Urbanist', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-small: 16px;
+    --spacing-medium: 24px;
+    --spacing-large: 32px;
+    --spacing-xl: 64px;
+    --spacing-xxl: 96px;
+}
+
+/* Global resets and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Global Body Styles (Mobile-First) --- */
+body {
+    font-family: var(--font-urbanist);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-body-text);
+    background-color: white;
+    margin: 30px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-gilda-display);
+    font-weight: 400;
+    color: var(--color-heading-dark);
+}
+
+/* General container for content width */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+/* --- 1. Header Section --- */
+.main-header { /* Styles the main header section */
+    background-color: transparent;
+    padding: var(--spacing-medium) 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-header .container { /* Styles the container within the main header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { /* Styles the logo within the header */
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-brand-primary);
+}
+
+.menu-button {  /* Styles the menu button */
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-button img { /* Styles the image inside the menu button */
+    width: 28px;
+    height: 28px;
+    filter: invert(30%) sepia(30%) saturate(2000%) hue-rotate(135deg) brightness(80%);
+}
+
+/* 2 Hero Section */
+.hero-section { /* Styles the main hero section */
+    position: relative;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-large);
+    background: linear-gradient(180deg, var(--color-accent-blue) 0%, rgba(255, 255, 255, 0) 100%);
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-title { /* Styles the main title in the hero section */
+    font-family: var(--font-gilda-display); /* Applies the 'Gilda Display' font */
+    font-size: 50px; /* Sets the font size of the hero title */
+    line-height: 1.2;
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-heading-dark);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    position: relative;
+}
+
+/* Specific styling for the first word "Travel" in hero title */
+.hero-title .hero-brand-word {
+    color: var(--color-brand-primary);
+}
+
+.hero-image-wrapper {/* Styles the wrapper around the hero image */
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden; /* Ensures the image is clipped within the parent */
+    margin: 0 auto;
+    ;
+}
+
+.hero-image { /* Styles the actual hero image */
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+/* Destination Intro Section */
+.destination-intro-section { /* Styles the section introducing destinations */
+    background-color: #fff;
+    padding: var(--spacing-xl) var(--spacing-medium);
+    text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+    margin-top: -40px;
+}
+
+.destination-heading { /* Styles the main heading for destinations */
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-small);
+}
+
+.destination-description { /* Styles the description text for destinations */
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-body-text);
+}
+
+/* Destination Cards Section */
+.destination-cards-section { /* Styles the container for destination cards */
+    background-color: var(--color-light-grey);
+    padding: var(--spacing-medium) 0;
+}
+
+.destination-cards-section .container { /* Styles the container for destination cards */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.destination-card { /* Styles individual destination cards */
+    flex: 1 1 calc(50% - 1.5rem);
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-medium);
+}
+
+.card-image-wrapper { /* Styles the wrapper around the card image */
+    width: 100%;
+    padding-bottom: 65%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image { /* Styles the actual image within the card */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-content { /* Styles the content area of the card */
+    padding: var(--spacing-medium);
+}
+
+.card-title { /* Styles the title within a destination card */
+    font-family: var(--font-urbanist);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.card-location { /* Styles the location information within a card */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.location-icon { /* Styles the location icon within a card */
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: #25A59E; /* Sets the icon color to the brand primary */
+}
+
+.location-text { /* Styles the location text within a card */
+    font-family: var(--font-urbanist);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-body-text);
+}
+
+/* Why Choose Us Section */
+.why-choose-us-section {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.why-choose-us-heading {
+    font-size: 72px;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-medium);
+}
+
+.why-choose-us-description {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-body-text);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Feature Cards Section */
+.feature-cards-section {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.feature-cards-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: var(--spacing-large) var(--spacing-medium);
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--spacing-large);
+}
+
+.feature-card--light-bg {
+    border-top: 5px solid var(--color-brand-primary);
+    padding-top: calc(var(--spacing-medium) - 5px);
+}
+
+.feature-card--dark-bg {
+    background-color: var(--color-brand-primary);
+    color: #fff;
+}
+
+.feature-card--dark-bg .feature-card-title,
+.feature-card--dark-bg .feature-card-description {
+    color: #fff;
+}
+
+.feature-card-title {
+    font-family: var(--font-gilda-display);
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-small);
+}
+
+.feature-card-description {
+    font-family: var(--font-urbanist);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-body-text);
+    margin-bottom: var(--spacing-medium);
+}
+
+.more-details-link {
+    font-family: var(--font-gilda-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-brand-primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.more-details-link .arrow-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.feature-card--dark-bg .more-details-link {
+    color: #fff;
+}
+
+.feature-card--dark-bg .more-details-link .arrow-icon {
+    filter: invert(1);
+}
+
+/* Travel Memorable Section */
+.travel-memorable-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-light-grey);
+}
+
+.travel-memorable-section .container {
+    padding: 0 var(--spacing-medium);
+}
+
+.travel-memorable-title {
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-medium);
+}
+
+.travel-memorable-title .travel-brand-word {
+    color: var(--color-brand-primary);
+}
+
+.travel-memorable-description {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-body-text);
+    margin-bottom: var(--spacing-medium);
+}
+
+.travel-memorable-image-wrapper {
+    padding-bottom: 50%;
+    margin-bottom: var(--spacing-medium);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.travel-memorable-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Video Documentation Section */
+.video-documentation-section {
+    background-color: var(--color-light-grey);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.video-documentation-title {
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-xl);
+}
+
+.video-placeholder-wrapper {
+    padding-bottom: 56.25%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-placeholder-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Call To Action Section */
+.call-to-action-section {
+    background-color: #fff;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--color-heading-dark);
+    margin-bottom: var(--spacing-medium);
+}
+
+.cta-button {
+    background-color: var(--color-brand-primary);
+    color: #fff;
+    font-family: var(--font-urbanist);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1f857e;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: var(--spacing-xl) 0;
+}
+
+body > hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: var(--spacing-xl) 0;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-large);
+}
+
+.footer-brand-info {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.footer-brand-info .footer-logo {
+    font-family: var(--font-gilda-display);
+    font-size: 28px;
+    font-weight: normal;
+    color: var(--color-brand-primary);
+    margin-bottom: 0;
+}
+
+.footer-brand-info .footer-tagline {
+    font-family: var(--font-urbanist);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-body-text);
+    margin-bottom: 0;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0;
+    margin-top: var(--spacing-small);
+}
+
+.footer-social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(150deg);
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: var(--spacing-medium);
+    text-align: right;
+}
+
+.footer-nav li a {
+    font-family: var(--font-urbanist);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-body-text);
+    text-decoration: none;
+}
+
+/* Desktop Styles (Media Query) */
+@media (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--spacing-small);
+    }
+    .hero-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 170px;
+        line-height: 1;
+        margin-bottom: var(--spacing-large);
+        max-width: 100%;
+        z-index: 2;
+        order: 1;
+    }
+
+    .hero-image-wrapper {
+        max-width: 900px;
+        order: 2;
+        margin-top: -30px;
+        z-index: 1;
+    }
+
+    .destination-intro-section {
+        padding: var(--spacing-xl);
+    }
+
+    .destination-heading {
+        font-size: 72px;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .destination-description {
+        font-size: 24px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .destination-cards-section .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-large);
+        padding: 0 var(--spacing-xl);
+    }
+
+    .destination-card {
+        margin-bottom: 0;
+    }
+
+    .why-choose-us-section {
+        padding: var(--spacing-small) 0;
+    }
+
+    .why-choose-us-heading {
+        font-size: 72px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .why-choose-us-description {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto var(--spacing-small);
+    }
+    
+    .feature-cards-section {
+        padding: var(--spacing-small) 0;
+    }
+
+    .feature-cards-section .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-medium);
+        padding: 0 var(--spacing-small);
+    }
+
+    .feature-card {
+        padding: var(--spacing-small);
+        margin-bottom: 0;
+    }
+    
+    .feature-card-title {
+        font-size: 40px;
+    }
+    
+    .feature-card-description {
+        font-size: 18px;
+        margin-bottom: var(--spacing-small);
+    }
+
+    .more-details-link {
+        justify-content: flex-end;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: var(--spacing-small);
+    }
+
+    .travel-memorable-section .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-small);
+    }
+
+    .travel-memorable-section .text-content {
+        flex: 1;
+        max-width: 55%;
+        text-align: left;
+    }
+
+    .travel-memorable-title {
+        font-size: 70px;
+        text-align: left;
+    }
+
+    .travel-memorable-description {
+        font-size: 18px;
+        text-align: left;
+        max-width: 600px;
+    }
+
+    .travel-memorable-image-wrapper {
+        flex: 0 0 auto;
+        width: 45%;
+        max-width: 500px;
+        height: auto;
+        margin-left: var(--spacing-small);
+        margin-right: 0;
+        padding-bottom: 0;
+    }
+    
+    .video-documentation-section {
+        padding: var(--spacing-small) 0;
+    }
+
+    .video-documentation-title {
+        font-size: 72px;
+        margin-bottom: var(--spacing-small);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .video-placeholder-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .call-to-action-section {
+        padding: var(--spacing-small) 0;
+    }
+
+    .call-to-action-section .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 var(--spacing-small);
+    }
+
+    .cta-title {
+        font-size: 72px;
+        margin-bottom: 0;
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    .cta-button {
+        padding: 20px 40px;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: var(--spacing-small) 0;
+    }
+
+    .main-footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--spacing-large);
+        padding: 0 var(--spacing-xl);
+    }
+    
+    .footer-left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-medium);
+        max-width: 400px;
+    }
+
+    .footer-brand-info {
+        text-align: left;
+    }
+
+    .footer-brand-info .footer-tagline {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .footer-social-icons {
+        justify-content: flex-start;
+        margin-top: var(--spacing-small);
+    }
+
+    .footer-nav ul {
+        flex-direction: row;
+        gap: var(--spacing-large);
+        justify-content: flex-end;
+        text-align: right;
+    }
+}
